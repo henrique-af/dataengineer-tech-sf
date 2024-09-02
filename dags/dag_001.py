@@ -30,7 +30,7 @@ with DAG(
 
     unzip_files = BashOperator(
         task_id="unzip_files",
-        bash_command=f"unzip -o {var.bucket_dag001}/input/*.zip -d gs://{var.bucket_dag001}/unziped/ && ls gs://{var.bucket_dag001}/unziped/ | head -n 1",
+        bash_command=f"unzip -o {var.bucket_dag001}/input/*.zip -d {var.bucket_dag001}/processing/ && ls {var.bucket_dag001}/processing/ | head -n 1",
         do_xcom_push=True,
     )
 

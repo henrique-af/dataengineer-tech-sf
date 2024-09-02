@@ -9,7 +9,7 @@ owner = 'Airflow_SF'
 
 if(env == "dev"):
     #gcs vars
-    bucket_dag001 =  '.\input\\' #gs://bucket-exemplo-dag-001
+    bucket_dag001 =  '.\\bucket\\' #gs://bucket-exemplo-dag-001
 
     #stage tables
     stage_dag001 = 'sf_stage_dag001'
