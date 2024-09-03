@@ -1,20 +1,19 @@
-import pendulum
+import pytz
 
 project_id = f"projeto-dataengineer-sf"
-local_tz = pendulum.timezone("America/Sao_Paulo")
+local_tz = pytz.timezone("America/Sao_Paulo")
 owner = "airflow"
 
 # gcs vars
-bucket_dag001 = "plugins/bucket/"  # gs://bucket-exemplo-dag-001
-
-# stage tables
-stage_dag001 = "sf_stage_dag001"
+bucket_dag001 = "dags/plugins/bucket" 
+bucket_plugin_dag001 = f"dags/plugins"
+bucket_dag_conceito = "gs://bucket-exemplo-dag-conceito"
 
 # work tables
-work_dag001 = "sf_work_dag001"
+work_table_dag001 = "public.work_table_dag001"
 
-# target tables
-target_dag001 = "sf_target_dag001"
-
-# filename vars
-dag001_filename = "arquivo-"  # arquivo-data do dia em padrão YYYY-MM-DD
+# postgres connection
+postgres_db = "postgres"
+postgres_user = "airflow" # colocar em uma váriavel de ambiente dentro do airflow para segurança
+pastgres_password = "airflow" # colocar em uma váriavel de ambiente dentro do airflow para segurança
+postgres_host = "172.18.0.2"
