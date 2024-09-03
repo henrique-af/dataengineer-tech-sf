@@ -1,0 +1,1 @@
+python ./project/copy_files_package/copy_files.py

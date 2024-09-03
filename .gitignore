@@ -1,0 +1,6 @@
+/dags/*
+/logs/*
+/plugins/*
+project/dags/__pycache__
+project/dags/plugins/config/__pycache__/airflow_vars.cpython-37.pyc
+project/dags/plugins/scripts/__pycache__/check_date.cpython-37.pyc
